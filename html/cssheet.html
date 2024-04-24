@@ -51,37 +51,38 @@
           <strong>Selettore universale</strong>: <code>*</code> per selezionare
           tutti gli elementi.
         </li>
+        <li>
+          <strong>Selettore di discendente</strong>: <code>div p</code> per
+          selezionare tutti i paragrafi all'interno di un div.
+        </li>
+        <li>
+          <strong>Selettore figlio diretto</strong>: <code>ul > li</code> per
+          selezionare solo i li che sono figli diretti di ul.
+        </li>
+        <li>
+          <strong>Selettore di attributo</strong>: <code>a[href]</code> per
+          selezionare tutti gli anchor che hanno un attributo href.
+        </li>
+        <li>
+          <strong>Selettore di attributo con valore specifico</strong>:
+          <code>input[type="text"]</code> per selezionare tutti gli input di
+          tipo text.
+        </li>
+        <li>
+          <strong>Selettore di pseudo-classe</strong>: <code>a:hover</code> per
+          selezionare gli anchor quando vengono "hoverati" (passaggio del mouse
+          sopra).
+        </li>
       </ul>
       <code>
         p { color: blue; } <br />
         .classe { font-size: 16px; } <br />
-        #id { background-color: #f0f0f0; }
-      </code>
-
-      <h2>Proprietà</h2>
-
-      <h3>Testo</h3>
-      <ul>
-        <li><strong>color</strong>: definisce il colore del testo.</li>
-        <li><strong>font-family</strong>: imposta il tipo di carattere.</li>
-        <li>
-          <strong>font-size</strong>: specifica la dimensione del carattere.
-        </li>
-        <li>
-          <strong>font-weight</strong>: imposta lo spessore del carattere (bold,
-          normal, etc.).
-        </li>
-        <li>
-          <strong>text-align</strong>: allinea il testo (left, right, center,
-          justify).
-        </li>
-      </ul>
-      <code>
-        p { color: blue; <br />
-        font-family: Arial, sans-serif; <br />
-        font-size: 16px; <br />
-        font-weight: bold; <br />
-        text-align: center; }
+        #id { background-color: #f0f0f0; } <br />
+        div p { font-style: italic; } <br />
+        ul > li { list-style-type: square; } <br />
+        a[href] { text-decoration: underline; } <br />
+        input[type="text"] { border: 1px solid #ccc; } <br />
+        a:hover { color: red; }
       </code>
 
       <h3>Box</h3>

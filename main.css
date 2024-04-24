@@ -1,0 +1,50 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(77, 77, 89);
+}
+
+a:hover {
+  color: rgb(228, 123, 163);
+  text-shadow: 1px 1px 1px rgb(244, 70, 186);
+  -webkit-filter: blur(0.2px);
+  transition-delay: 0.2s;
+}
+
+li {
+  list-style: none;
+}
+
+.titolo_frontpage {
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgb(248, 249, 252);
+  display: flex;
+  height: 60vh;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(202, 204, 211);
+  padding: 60px;
+  bottom: 0;
+  align-items: center;
+}
+
+footer p {
+  font-size: 12px;
+  color: rgb(138, 142, 146);
+}
+
+footer img {
+  width: 150px;
+}

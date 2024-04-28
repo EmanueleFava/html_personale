@@ -119,7 +119,7 @@ h3 {
 pre {
   font-style: italic;
   font-weight: 200;
-  background-color: #bdc4a7;
+  background-color: hwb(72 82% 12%);
   padding: 3vh;
   margin: 2vh 0;
   border: 0.1vh #5f6061 solid;
@@ -128,7 +128,7 @@ pre {
 code {
   font-style: italic;
   font-weight: 200;
-  background-color: #bdc4a7;
+  background-color: hwb(72 82% 12%);
   padding: 0.1vh;
   margin: 2vh 0;
 }

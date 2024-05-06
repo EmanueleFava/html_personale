@@ -23,13 +23,13 @@
       <hr />
       <ul>
         <li>
-          <strong>==</strong>: verifica l'uguaglianza "debole", che consente il
-          "coercion" dei tipi. <br />
+          <strong>==</strong>: verifica l'uguaglianza "debole", consentendo la
+          coercizione dei tipi. <br />
           Esempio: <code>5 == '5'</code> è vero.
         </li>
         <li>
           <strong>===</strong>: verifica l'uguaglianza "rigorosa", dove i tipi
-          devono essere uguali oltre che i valori. <br />
+          devono essere uguali oltre ai valori. <br />
           Esempio: <code>5 === '5'</code> è falso.
         </li>
         <li>
@@ -42,21 +42,7 @@
           <code>===</code> ma al contrario. <br />
           Esempio: <code>5 !== '5'</code> è vero.
         </li>
-        <li>
-          Altri operatori di comparazione includono
-          <strong>&lt;</strong> (minore di), <strong>&lt;=</strong> (minore o
-          uguale a), <strong>&gt;</strong> (maggiore di),
-          <strong>&gt;=</strong> (maggiore o uguale a).
-        </li>
       </ul>
-      <code>
-        console.log(10 == '10'); // vero, coerzione del tipo <br />
-        console.log(10 === '10'); // falso, tipi diversi <br />
-        console.log(10 != '10'); // falso, coerzione del tipo <br />
-        console.log(10 !== '10'); // vero, tipi diversi <br />
-        console.log(5 < 10); // vero <br />
-        console.log(10 >= 10); // vero
-      </code>
 
       <h2>Variabili e Tipi di Dati</h2>
       <hr />
@@ -75,13 +61,20 @@
         <li><strong>String</strong>: testo (racchiuso tra virgolette).</li>
         <li><strong>Number</strong>: numeri interi o decimali.</li>
         <li><strong>Boolean</strong>: valori vero o falso.</li>
+        <li><strong>null</strong>: indica un valore assente o vuoto.</li>
+        <li>
+          <strong>undefined</strong>: indica una variabile dichiarata ma senza
+          valore assegnato.
+        </li>
       </ul>
       <code>
         let nome = 'Mario'; <br />
         const eta = 30; <br />
         var indirizzo = 'Via Roma'; <br />
         let isOnline = true; <br />
-        let prezzo = 9.99;
+        let prezzo = 9.99; <br />
+        let nulla = null; <br />
+        let senzaDefinizione; // undefined
       </code>
 
       <h2>Funzioni</h2>
@@ -91,107 +84,24 @@
         <li>
           <strong>arrow function</strong>: sintassi breve per le funzioni.
         </li>
-        <li><strong>return</strong>: restituisce un valore.</li>
-        <li><strong>parametri</strong>: variabili passate alla funzione.</li>
+        <li>
+          <strong>high-order functions</strong>: funzioni che prendono altre
+          funzioni come parametri o restituiscono funzioni.
+        </li>
+        <li>
+          <strong>callback</strong>: una funzione passata come argomento a
+          un'altra funzione.
+        </li>
       </ul>
       <code>
         function saluta(nome) { <br />
         &nbsp;&nbsp;&nbsp;&nbsp;return 'Ciao ' + nome; <br />
         } <br /><br />
-        const add = (a, b) => a + b;
-      </code>
-
-      <h2>Condizioni</h2>
-      <hr />
-      <ul>
-        <li><strong>if</strong>: esegue il blocco se la condizione è vera.</li>
-        <li>
-          <strong>else</strong>: esegue il blocco se la condizione è falsa.
-        </li>
-        <li><strong>else if</strong>: permette condizioni multiple.</li>
-      </ul>
-      <code>
-        let ora è 10; <br />
-        if (ora < 12) { <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Buongiorno'); <br />
-        } else if (ora < 18) { <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Buon pomeriggio'); <br />
-        } else { <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Buonasera'); <br />
-        }
-      </code>
-
-      <h2>Cicli</h2>
-      <hr />
-      <ul>
-        <li>
-          <strong>for</strong>: esegue un ciclo per un numero definito di volte.
-        </li>
-        <li>
-          <strong>while</strong>: esegue il ciclo finché la condizione è vera.
-        </li>
-        <li>
-          <strong>for...of</strong>: esegue un ciclo su ogni elemento di un
-          array.
-        </li>
-        <li>
-          <strong>for...in</strong>: esegue un ciclo su ogni chiave di un
-          oggetto.
-        </li>
-      </ul>
-      <code>
-        for (let i = 0; i < 5; i++) { <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;console.log(i); <br />
-        } <br /><br />
-        let count = 0; <br />
-        while (count < 3) { <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;console.log(count); <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;count++; <br />
-        }
-      </code>
-
-      <h2>Array e Oggetti</h2>
-      <hr />
-      <ul>
-        <li><strong>Array</strong>: una lista di elementi.</li>
-        <li>
-          <strong>push</strong>: aggiunge un elemento alla fine dell'array.
-        </li>
-        <li><strong>pop</strong>: rimuove l'ultimo elemento dell'array.</li>
-        <li>
-          <strong>Oggetto</strong>: una collezione di coppie chiave-valore.
-        </li>
-      </ul>
-      <code>
-        let frutta = ['mela', 'banana', 'arancia']; <br />
-        frutta.push('pera'); <br />
-        frutta.pop(); <br /><br />
-        let persona = { nome: 'Mario', eta: 30 }; <br />
-        persona.indirizzo è 'Via Roma';
-      </code>
-
-      <h2>Spread Operator</h2>
-      <hr />
-      <ul>
-        <li>
-          <strong>Spread Operator (...)</strong>: consente di espandere
-          elementi, creare copie di array o oggetti.
-        </li>
-        <li>
-          <strong>Creare una copia di un array</strong>: utilizzando `...` per
-          copiare un array.
-        </li>
-        <li>
-          <strong>Combinare array</strong>: è possibile unire più array con lo
-          spread operator.
-        </li>
-      </ul>
-      <code>
-        let arrayOriginale = [1, 2, 3]; <br />
-        let arrayCopia = [...arrayOriginale]; // Copia di array <br /><br />
-        let arrayUno = [4, 5]; <br />
-        let arrayCombinato = [...arrayOriginale, ...arrayUno]; // Combinare
-        array
+        const add = (a, b) => a + b; <br /><br />
+        function eseguiCallback(callback) { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;callback('Funzione di callback'); <br />
+        } <br />
+        eseguiCallback(console.log); // Funzione di callback
       </code>
 
       <h2>Manipolazione del DOM</h2>
@@ -205,16 +115,42 @@
           corrisponde a un selettore CSS.
         </li>
         <li>
+          <strong>document.querySelectorAll</strong>: ottiene tutti gli elementi
+          che corrispondono a un selettore CSS.
+        </li>
+        <li>
           <strong>addEventListener</strong>: aggiunge un listener per gli
           eventi.
         </li>
+        <li>
+          <strong>removeEventListener</strong>: rimuove un listener per gli
+          eventi.
+        </li>
+        <li>
+          <strong>setAttribute</strong>: imposta un attributo su un elemento.
+        </li>
+        <li>
+          <strong>getAttribute</strong>: ottiene un attributo di un elemento.
+        </li>
+        <li><strong>removeChild</strong>: rimuove un elemento dal DOM.</li>
+        <li>
+          <strong>cloneNode</strong>: crea una copia di un nodo. Passando `true`
+          copia anche i nodi figli; `false` copia solo il nodo stesso.
+        </li>
       </ul>
       <code>
-        let elemento è document.getElementById('myId'); <br />
-        let btn è document.querySelector('.myButton'); <br />
-        btn.addEventListener('click', function() { <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Bottone cliccato'); <br />
-        });
+        let elemento = document.querySelector('.myClass'); <br />
+        elemento.setAttribute('title', 'Nuovo titolo'); <br />
+        console.log(elemento.getAttribute('title')); // "Nuovo titolo"
+        <br /><br />
+
+        let elementoPadre = document.getElementById('parent'); <br />
+        let elementoFiglio = document.querySelector('.child'); <br />
+        elementoPadre.removeChild(elementoFiglio); <br /><br />
+
+        let nodoOriginale = document.getElementById('original'); <br />
+        let nodoCopia = nodoOriginale.cloneNode(false); // Copia solo il nodo
+        stesso senza eventi
       </code>
 
       <h2>Console</h2>

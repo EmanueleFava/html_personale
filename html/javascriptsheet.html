@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Cheat Sheet</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">Homepage</a></li>
+        <li><a href="markdownsheet.html">MARKDOWN_sheet</a></li>
+        <li><a href="gitsheet.html">GIT_sheet</a></li>
+        <li><a href="htmlsheet.html">HTML_sheet</a></li>
+      </ul>
+    </nav>
+
+    <div class="page_container">
+      <h1>JavaScript Cheat Sheet</h1>
+
+      <h2>Operatori di Comparazione</h2>
+      <hr />
+      <ul>
+        <li>
+          <strong>==</strong>: verifica l'uguaglianza "debole", che consente il
+          "coercion" dei tipi. <br />
+          Esempio: <code>5 == '5'</code> è vero.
+        </li>
+        <li>
+          <strong>===</strong>: verifica l'uguaglianza "rigorosa", dove i tipi
+          devono essere uguali oltre che i valori. <br />
+          Esempio: <code>5 === '5'</code> è falso.
+        </li>
+        <li>
+          <strong>!=</strong>: verifica la disuguaglianza "debole", simile a
+          <code>==</code> ma al contrario. <br />
+          Esempio: <code>5 != '5'</code> è falso.
+        </li>
+        <li>
+          <strong>!==</strong>: verifica la disuguaglianza "rigorosa", simile a
+          <code>===</code> ma al contrario. <br />
+          Esempio: <code>5 !== '5'</code> è vero.
+        </li>
+        <li>
+          Altri operatori di comparazione includono
+          <strong>&lt;</strong> (minore di), <strong>&lt;=</strong> (minore o
+          uguale a), <strong>&gt;</strong> (maggiore di),
+          <strong>&gt;=</strong> (maggiore o uguale a).
+        </li>
+      </ul>
+      <code>
+        console.log(10 == '10'); // vero, coerzione del tipo <br />
+        console.log(10 === '10'); // falso, tipi diversi <br />
+        console.log(10 != '10'); // falso, coerzione del tipo <br />
+        console.log(10 !== '10'); // vero, tipi diversi <br />
+        console.log(5 < 10); // vero <br />
+        console.log(10 >= 10); // vero
+      </code>
+
+      <h2>Variabili e Tipi di Dati</h2>
+      <hr />
+      <ul>
+        <li>
+          <strong>let</strong>: dichiara una variabile che può essere
+          riassegnata.
+        </li>
+        <li>
+          <strong>const</strong>: dichiara una costante (non modificabile).
+        </li>
+        <li>
+          <strong>var</strong>: dichiarazione di variabile (vecchio stile, non
+          raccomandato).
+        </li>
+        <li><strong>String</strong>: testo (racchiuso tra virgolette).</li>
+        <li><strong>Number</strong>: numeri interi o decimali.</li>
+        <li><strong>Boolean</strong>: valori vero o falso.</li>
+      </ul>
+      <code>
+        let nome = 'Mario'; <br />
+        const eta = 30; <br />
+        var indirizzo = 'Via Roma'; <br />
+        let isOnline = true; <br />
+        let prezzo = 9.99;
+      </code>
+
+      <h2>Funzioni</h2>
+      <hr />
+      <ul>
+        <li><strong>function</strong>: dichiara una funzione.</li>
+        <li>
+          <strong>arrow function</strong>: sintassi breve per le funzioni.
+        </li>
+        <li><strong>return</strong>: restituisce un valore.</li>
+        <li><strong>parametri</strong>: variabili passate alla funzione.</li>
+      </ul>
+      <code>
+        function saluta(nome) { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;return 'Ciao ' + nome; <br />
+        } <br /><br />
+        const add = (a, b) => a + b;
+      </code>
+
+      <h2>Condizioni</h2>
+      <hr />
+      <ul>
+        <li><strong>if</strong>: esegue il blocco se la condizione è vera.</li>
+        <li>
+          <strong>else</strong>: esegue il blocco se la condizione è falsa.
+        </li>
+        <li><strong>else if</strong>: permette condizioni multiple.</li>
+      </ul>
+      <code>
+        let ora è 10; <br />
+        if (ora < 12) { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Buongiorno'); <br />
+        } else if (ora < 18) { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Buon pomeriggio'); <br />
+        } else { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Buonasera'); <br />
+        }
+      </code>
+
+      <h2>Cicli</h2>
+      <hr />
+      <ul>
+        <li>
+          <strong>for</strong>: esegue un ciclo per un numero definito di volte.
+        </li>
+        <li>
+          <strong>while</strong>: esegue il ciclo finché la condizione è vera.
+        </li>
+        <li>
+          <strong>for...of</strong>: esegue un ciclo su ogni elemento di un
+          array.
+        </li>
+        <li>
+          <strong>for...in</strong>: esegue un ciclo su ogni chiave di un
+          oggetto.
+        </li>
+      </ul>
+      <code>
+        for (let i = 0; i < 5; i++) { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(i); <br />
+        } <br /><br />
+        let count = 0; <br />
+        while (count < 3) { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(count); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;count++; <br />
+        }
+      </code>
+
+      <h2>Array e Oggetti</h2>
+      <hr />
+      <ul>
+        <li><strong>Array</strong>: una lista di elementi.</li>
+        <li>
+          <strong>push</strong>: aggiunge un elemento alla fine dell'array.
+        </li>
+        <li><strong>pop</strong>: rimuove l'ultimo elemento dell'array.</li>
+        <li>
+          <strong>Oggetto</strong>: una collezione di coppie chiave-valore.
+        </li>
+      </ul>
+      <code>
+        let frutta = ['mela', 'banana', 'arancia']; <br />
+        frutta.push('pera'); <br />
+        frutta.pop(); <br /><br />
+        let persona = { nome: 'Mario', eta: 30 }; <br />
+        persona.indirizzo è 'Via Roma';
+      </code>
+
+      <h2>Spread Operator</h2>
+      <hr />
+      <ul>
+        <li>
+          <strong>Spread Operator (...)</strong>: consente di espandere
+          elementi, creare copie di array o oggetti.
+        </li>
+        <li>
+          <strong>Creare una copia di un array</strong>: utilizzando `...` per
+          copiare un array.
+        </li>
+        <li>
+          <strong>Combinare array</strong>: è possibile unire più array con lo
+          spread operator.
+        </li>
+      </ul>
+      <code>
+        let arrayOriginale = [1, 2, 3]; <br />
+        let arrayCopia = [...arrayOriginale]; // Copia di array <br /><br />
+        let arrayUno = [4, 5]; <br />
+        let arrayCombinato = [...arrayOriginale, ...arrayUno]; // Combinare
+        array
+      </code>
+
+      <h2>Manipolazione del DOM</h2>
+      <hr />
+      <ul>
+        <li>
+          <strong>document.getElementById</strong>: ottiene un elemento per ID.
+        </li>
+        <li>
+          <strong>document.querySelector</strong>: ottiene il primo elemento che
+          corrisponde a un selettore CSS.
+        </li>
+        <li>
+          <strong>addEventListener</strong>: aggiunge un listener per gli
+          eventi.
+        </li>
+      </ul>
+      <code>
+        let elemento è document.getElementById('myId'); <br />
+        let btn è document.querySelector('.myButton'); <br />
+        btn.addEventListener('click', function() { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Bottone cliccato'); <br />
+        });
+      </code>
+
+      <h2>Console</h2>
+      <hr />
+      <ul>
+        <li><strong>console.log</strong>: stampa messaggi o variabili.</li>
+        <li><strong>console.error</strong>: stampa errori.</li>
+        <li><strong>console.warn</strong>: stampa avvisi.</li>
+      </ul>
+      <code>
+        console.log('Messaggio di log'); <br />
+        console.error('Errore'); <br />
+        console.warn('Avviso');
+      </code>
+    </div>
+
+    <footer class="insidefooter">
+      <ul>
+        <li><a href="../index.html">Homepage</a></li>
+        <li><a href="markdownsheet.html">MARKDOWN_sheet</a></li>
+        <li><a href="gitsheet.html">GIT_sheet</a></li>
+        <li><a href="htmlsheet.html">HTML_sheet</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
